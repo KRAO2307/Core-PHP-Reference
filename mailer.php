@@ -59,28 +59,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail = new PHPMailer; 
  
             $mail->isSMTP();                      // Set mailer to use SMTP 
-            $mail->Host = 'mail.gbusinesslisting.com';       // Specify main and backup SMTP servers 
+            $mail->Host = 'smtp.gmail.com';       // Specify main and backup SMTP servers 
             $mail->SMTPAuth = true;               // Enable SMTP authentication 
-            $mail->Username = 'admin@gbusinesslisting.com';   // SMTP username 
-            $mail->Password = 'Support@123';   // SMTP password 
+            $mail->Username = 'kamlesh.k.rao@gmail.com';   // SMTP username 
+            $mail->Password = 'your mail password';   // SMTP password 
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            // Enable TLS encryption, `ssl` also accepted 
             $mail->Port = 587;                    // TCP port to connect to
             
                     // Sender info 
-            $mail->setFrom('admin@gbusinesslisting.com', 'Gbusinesslisting'); 
-            $mail->addReplyTo('admin@gbusinesslisting.com', 'Gbusinesslisting'); 
+            $mail->setFrom('kamlesh.k.rao@gmail.com', 'Kamlesh'); 
+            $mail->addReplyTo('kamlesh.k.rao@gmail.com', 'Kamlesh'); 
             
             // Add a recipient 
-            $mail->addAddress('admin@gbusinesslisting.com');          
-            // $mail->addCC('priyanshu@milkywayservices.com'); 
-            // $mail->addBCC('kamlesh.milkywayservices@gmail.com');          
+            $mail->addAddress('kamlesh.k.rao@gmail.com');          
+            // $mail->addCC('addCCemailid@gmail.com'); 
+            // $mail->addBCC('addBCCemailid@gmail.com');          
             // Set email format to HTML 
             $mail->isHTML(true);          
             // Mail subject 
             $mail->Subject = $title; 
              
             // Mail body content 
-            $bodyContent = '<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><title></title></head><body style=""><section style="max-width: 445px;box-shadow: 1px 1px 8px 1px grey; margin: 0 auto; margin-top: 40px;margin-bottom: 40px;background-color: #211d5a;padding: 40px 0px 40px 0px;"><table width="95%" style="background-color: white;margin: 0 auto;padding: 8px;"><tr><td><div style="text-align: center;"><img src="https://gbusinesslisting.com/images/gbusinesslogo.png" width="250px" style="margin-top: 10px;"></div><div ><div style="font-size: 22px; margin-top: 40px;"><span style="font-weight: bolder;">Name</span>:- '.$name.'</div><div style="font-size: 22px; margin-top: 40px;"><span style="font-weight: bolder;">Email</span>:- '.$email.'</div><div style="font-size: 22px; margin-top: 40px;"><span style="font-weight: bolder;">Title</span>:- '.$title.'</div><div ><div style="font-size: 22px;margin-top: 40px; text-align: justify;"><span style="font-weight: bolder;display: inline-block;">Message</span>:- '.$message.'</div></div><hr style="margin-top: 70px;"></div></td></tr></table></section></body></html>'; 
+            $bodyContent = '<html><body><p>Create you mailer</p></body></html>'; 
             
             $mail->Body    = $bodyContent;
             
